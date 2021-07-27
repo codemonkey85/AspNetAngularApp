@@ -22,4 +22,11 @@ export class TodosComponent {
     }
     return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
   }
+
+  addItem(description) {
+    this.allItems.unshift({
+      description,
+      done: false
+    });
+  }
 }
